@@ -31,8 +31,10 @@ function sortearAmigo() {
 
   if ((amigoSorteado != "") && (amigoSorteado != null)) {
     novoItemSorteado = document.createElement("li");
-    novoItemSorteado.innerHTML = amigoSorteado;
-    listaSorteado.appendChild(novoItemSorteado)
+    novoItemSorteado.innerHTML = `O amigo secreto sorteado é: ${amigoSorteado}`;
+    listaSorteado.appendChild(novoItemSorteado);
+    lista = document.getElementById("listaAmigos");
+    lista.innerHTML = "";
   } else {
     listaSorteado.innerHTML = "";
   }
@@ -41,5 +43,6 @@ sortearAmigo();
 function limparCampo() {
   capturaNomes = document.querySelector("input");
   capturaNomes.value = "";
+
 }
 
